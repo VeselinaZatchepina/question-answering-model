@@ -4,7 +4,7 @@
 
 ### Пример:
 
-Вводим следующий текст:
+Вводим текст:
 ```python
 paragraph = '''<p>Russia (Russian: Россия, Rossiya, Russian pronunciation:
                     [rɐˈsʲijə]), or the Russian Federation,[b] is a country spanning
