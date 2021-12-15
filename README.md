@@ -37,3 +37,8 @@ Answer: saint petersburg
 Question: How much sovereign nations does Russia have?
 Answer: sixteen
 ```
+
+Запрос - ответ через Postman:
+
+![Снимок экрана 2021-12-15 в 22 16 32](https://user-images.githubusercontent.com/16818608/146253177-48041a47-ae9f-47df-978c-4b3e4a799ffa.png)
+
