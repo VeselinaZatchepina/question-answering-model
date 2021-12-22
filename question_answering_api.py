@@ -7,10 +7,12 @@ import json
 class Item(BaseModel):
     questions: set
     paragraph: str
+        
+        
+model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
 
 app = FastAPI()
 
-model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
 
 @app.get("/")
 async def root():
