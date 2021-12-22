@@ -7,10 +7,8 @@ class Result:
     def __init__(self, result):
         self.result = result
 
-def getAnswer(questions, paragraph):
+def getAnswer(questions, paragraph, model):
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-
-    model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
    
     res = []
     for question in questions:
