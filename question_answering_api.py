@@ -9,7 +9,6 @@ class Item(BaseModel):
     paragraph: str
 
 app = FastAPI()
-app.run(host='0.0.0.0', port=5000)
 
 model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
 
