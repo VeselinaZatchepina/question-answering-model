@@ -1,14 +1,11 @@
 import question_answering_model as fl
 from fastapi import FastAPI
 from pydantic import BaseModel
-import tensorflow_hub as hub
-import json
 
 class Item(BaseModel):
-    questions: set
+    question: str
     paragraph: str
         
-model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
 
 app = FastAPI()
 
@@ -19,4 +16,4 @@ async def root():
 
 @app.post("/predict/")
 def predict(item: Item):
-    return fl.getAnswer(item.questions, item.paragraph, model)
+    return fl.answer_question(item.question, item.paragraph)
