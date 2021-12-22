@@ -29,7 +29,7 @@ def answer_question(question, answer_text):
 
     # get the answer for the question
     start_scores, end_scores = model(torch.tensor([token_indices]), # The tokens representing our input combining question and answer.
-                                    token_type_ids=torch.tensor([segment_ids])) # The segment IDs to differentiate question from answer
+                                    token_type_ids=torch.tensor([segment_ids]), return_dict=False) # The segment IDs to differentiate question from answer
 
     # Find the tokens with the highest `start` and `end` scores.
     answer_begin = torch.argmax(start_scores)
