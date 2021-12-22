@@ -24,16 +24,11 @@ paragraph = '''<p>Russia (Russian: Россия, Rossiya, Russian pronunciation:
 
 Далее задаём вопросы:
 ```python
-questions = [
-  'What\'s the second-largest city of Russia?',
-  'How much sovereign nations does Russia have?',
-]
+question = 'How much sovereign nations does Russia have?'
 ```
 
 Получаем результат:
 ```python
-Question: What's the second-largest city of Russia?
-Answer: saint petersburg
 Question: How much sovereign nations does Russia have?
 Answer: sixteen
 ```
