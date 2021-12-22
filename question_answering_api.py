@@ -1,4 +1,4 @@
-import question_answering_model as fl
+import .question_answering_model as fl
 from fastapi import FastAPI
 from pydantic import BaseModel
 import json
