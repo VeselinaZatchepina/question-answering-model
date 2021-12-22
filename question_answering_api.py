@@ -10,8 +10,6 @@ class Item(BaseModel):
         
 app = FastAPI()
 
-model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
-
 
 @app.get("/")
 async def root():
@@ -21,3 +19,4 @@ async def root():
 def predict(item: Item):
     return fl.getAnswer(item.questions, item.paragraph, model)
 
+model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
