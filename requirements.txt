@@ -3,4 +3,3 @@ uvicorn
 tensorflow-cpu
 tensorflow_hub
 transformers
-unsync
