@@ -35,5 +35,6 @@ Answer: sixteen
 
 Запрос - ответ через Postman:
 
-![Снимок экрана 2021-12-15 в 22 16 32](https://user-images.githubusercontent.com/16818608/146253177-48041a47-ae9f-47df-978c-4b3e4a799ffa.png)
+![Снимок экрана 2021-12-23 в 02 04 17](https://user-images.githubusercontent.com/16818608/147164718-6403ca35-bd9b-4bf0-9446-33e63b9aa50c.png)
+
 
