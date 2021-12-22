@@ -10,7 +10,7 @@ class Result:
 def getAnswer(questions, paragraph):
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-    model = hub.load('https://drive.google.com/drive/folders/1gJOMfdosC2CQVCpG-MHuuV986A_Of-h2?usp=sharing/bert-uncased-tf2-qa_1.tar')
+    model = hub.load('https://github.com/see--/natural-question-answering/releases/download/v0.0.1/model.tar.gz')
    
     res = []
     for question in questions:
