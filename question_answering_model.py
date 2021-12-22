@@ -43,5 +43,5 @@ def answer_question(question, answer_text):
     answer = [word.replace("▁","") if word.startswith("▁") else word for word in answer] #use this when using model "twmkn9/albert-base-v2-squad2"
     answer = " ".join(answer).replace("[CLS]","").replace("[SEP]","").replace(" ##","")
     
-    return answer
+    return f'Question: {question} Answer: {answer}'
 
