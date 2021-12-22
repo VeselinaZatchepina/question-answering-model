@@ -4,3 +4,4 @@ torchvision==0.9.1+cpu
 transformers
 flask
 uvicorn
+fastapi
