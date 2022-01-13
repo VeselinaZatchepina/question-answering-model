@@ -13,7 +13,7 @@ def answer_question(question, answer_text):
     the words within the `answer` that can answer the question. Prints them out.
     '''
     
-    #    tokenize the input text and get the corresponding indices
+    # tokenize the input text and get the corresponding indices
     token_indices = tokenizer.encode(question, answer_text)
 
     # Search the input_indices for the first instance of the `[SEP]` token.
