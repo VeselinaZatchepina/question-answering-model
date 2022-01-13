@@ -2,6 +2,7 @@ import question_answering_model as fl
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+
 class Item(BaseModel):
     question: str
     paragraph: str
