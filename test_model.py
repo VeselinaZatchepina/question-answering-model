@@ -19,4 +19,4 @@ def test_question_nations():
     json_data = response.json() 
 
     assert response.status_code == 200
-    assert json_data == "Question: How much sovereign nations does Russia have? Answer: 16"
+    assert json_data == "Question: How much sovereign nations does Russia have? Answer: sixteen"
