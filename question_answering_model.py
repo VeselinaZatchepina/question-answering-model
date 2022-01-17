@@ -49,4 +49,4 @@ def generate_text(text, max_length, num_return_sequences):
     generator = pipeline('text-generation', model='gpt2')
     set_seed(42)
     
-    return generator(text, max_length=max_length, num_return_sequences=num_return_sequences))
+    return generator(text, max_length=max_length, num_return_sequences=num_return_sequences)
