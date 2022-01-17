@@ -1,6 +1,6 @@
 import os
 import torch
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering, pipeline, set_seed
 
 def answer_question(question, answer_text):
     name = "mrm8488/bert-small-finetuned-squadv2"
@@ -45,3 +45,8 @@ def answer_question(question, answer_text):
     
     return f'Question: {question} Answer: {answer}'
 
+def generate_text(text, max_length, num_return_sequences):
+    generator = pipeline('text-generation', model='gpt2')
+    set_seed(42)
+    
+    return generator(text, max_length=max_length, num_return_sequences=num_return_sequences))
