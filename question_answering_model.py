@@ -51,6 +51,7 @@ def generate_text(text, max_length):
 
     #model = ReformerModelWithLMHead.from_pretrained("google/reformer-crime-and-punishment")
     #tok = ReformerTokenizer.from_pretrained("google/reformer-crime-and-punishment")
+    #PyCharm
 
     tok = AutoTokenizer.from_pretrained("sberbank-ai/rugpt3small_based_on_gpt2")
     model = AutoModelForCausalLM.from_pretrained("sberbank-ai/rugpt3small_based_on_gpt2")
