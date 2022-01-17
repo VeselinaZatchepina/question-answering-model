@@ -1,6 +1,6 @@
 import os
 import torch
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering, pipeline, set_seed
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering, AutoModelForCausalLM
 
 def answer_question(question, answer_text):
     name = "mrm8488/bert-small-finetuned-squadv2"
