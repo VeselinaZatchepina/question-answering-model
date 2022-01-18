@@ -20,3 +20,15 @@ def test_question_nations():
 
     assert response.status_code == 200
     assert json_data == "Question: How much sovereign nations does Russia have? Answer: sixteen"
+
+def test_cap():
+    response = client.post("/predict_sequel/",
+       json={
+           "text" : "How much sovereign nations does Russia",
+           "max_length" : 50
+       }
+    )
+    json_data = response.json()
+
+    assert response.status_code == 200
+    assert len(json_data) > 50
