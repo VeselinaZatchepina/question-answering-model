@@ -38,3 +38,5 @@ Answer: sixteen
 ![Снимок экрана 2021-12-23 в 02 04 17](https://user-images.githubusercontent.com/16818608/147164718-6403ca35-bd9b-4bf0-9446-33e63b9aa50c.png)
 
 
+Развёрнуто на Heroku:
+http://question-answering-model.herokuapp.com
