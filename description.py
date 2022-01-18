@@ -21,8 +21,8 @@ tags_metadata = [
         "name": "Вопрос|Ответ",
         "description": "Находит ответ в тексте",
         "externalDocs": {
-            "description": "**Нужна ссылка**",
-            "url": "https://examle.com",
+            "description": "TF.HubModel",
+            "url": "https://tfhub.dev/see--/bert-uncased-tf2-qa/1",
         },
     },
     {
