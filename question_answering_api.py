@@ -2,6 +2,7 @@ import question_answering_model as fl
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
+import description as ds
 
 
 class Item(BaseModel):
@@ -14,17 +15,26 @@ class sequel(BaseModel):
     temperature: Optional[float] = 0.7
         
 
-app = FastAPI()
+app = FastAPI(
+    title="URFU_TextApp ",
+    description=ds.description,
+    openapi_tags=ds.tags_metadata,
+    version="0.2",
+    license_info={
+        "name": "Common Public License",
+        "url": "https://opensource.org/licenses/cpl1.0.php",
+    }
+)
 
 
-@app.get("/")
+@app.get("/", tags=["Запрос на доступность"])
 async def root():
     return "This is a question answering model"
 
-@app.post("/predict/")
+@app.post("/predict/", tags=["Вопрос|Ответ"])
 async def predict(item: Item):
     return fl.answer_question(item.question, item.paragraph)
 
-@app.post("/predict_sequel/")
+@app.post("/predict_sequel/", tags=["Преступление и наказание"])
 async def predict_sequel(sequel: sequel):
     return fl.generate_text(sequel.text, sequel.max_length, sequel.temperature)
