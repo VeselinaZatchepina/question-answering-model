@@ -45,14 +45,13 @@ def answer_question(question, answer_text):
     
     return f'Question: {question} Answer: {answer}'
 
-def generate_text(text, max_length):
-    #tok = AutoTokenizer.from_pretrained("google/reformer-crime-and-punishment")
-    #model = AutoModelForCausalLM.from_pretrained("google/reformer-crime-and-punishment")
+def generate_text(text, max_length, temperature):
+    #Модель Google, которая дополняет текст фразами из "Преступления и наказания"
+    tok = AutoTokenizer.from_pretrained("google/reformer-crime-and-punishment")
+    model = AutoModelForCausalLM.from_pretrained("google/reformer-crime-and-punishment")
 
-    model = ReformerModelWithLMHead.from_pretrained("google/reformer-crime-and-punishment")
-    tok = ReformerTokenizer.from_pretrained("google/reformer-crime-and-punishment")
-
+    #Модель генерации текста от Сбербанка, работает с русским, но не походит для Heroku
     #tok = AutoTokenizer.from_pretrained("sberbank-ai/rugpt3small_based_on_gpt2")
     #model = AutoModelForCausalLM.from_pretrained("sberbank-ai/rugpt3small_based_on_gpt2")
 
-    return tok.decode(model.generate(tok.encode(text, return_tensors="pt"), do_sample=True,temperature=0.7, max_length=max_length)[0])
+    return tok.decode(model.generate(tok.encode(text, return_tensors="pt"), do_sample=True,temperature=temperature, max_length=max_length)[0])
