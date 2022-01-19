@@ -6,20 +6,18 @@
 https://question-answering-model.herokuapp.com
 
 ### Методы:
-* **/predict/** - позволяет отправить текст и вопрос к этому тексу. В ответ приходит пара вопрос|ответ.
+* **/predict_ans/** - позволяет отправить текст и вопрос к этому тексу. В ответ приходит пара вопрос|ответ.
 * **/predict_cap/** - перефразирует указанный текст в другой с учетом числа символов, которые поступили в запросе.
-* **/predict_sequel/** - дополняет произвольный текст цитатми из "Преступления и наказания", наиболее подходящими по смыслу.
 
 #### Использованные готовые модели
-* **/predict/** - https://tfhub.dev/see--/bert-uncased-tf2-qa/1  
+* **/predict_ans/** - https://tfhub.dev/see--/bert-uncased-tf2-qa/1  
 * **/predict_cap/** - https://huggingface.co/google/reformer-crime-and-punishment  
-* **/predict_sequel/** - https://huggingface.co/google/t5-small-lm-adapt  
 
 #### Документация и описание параметров:
 https://question-answering-model.herokuapp.com/docs
 
 ## Примеры:
-### /predict/
+### /predict_ans/
 Отправляем POST-запросом в body JSON-файлом текст и вопрос к нему:
 ```json
     "question" : "How much sovereign nations does Russia have?",
@@ -43,16 +41,5 @@ https://question-answering-model.herokuapp.com/docs
 Получаем результат:
 ```json
   "How much sovereign nations does Russia was making more chin looked at the time and was except for any old-fash"
-```
-
-### /predict_sequel/
-Отправляем POST-запросом в body JSON-файлом текст и длину дополнения к нему:
-```json
-    "text" : "The superjumbo was developed at a cost of $25 billion and, with capacity for up to 853 passengers",
-    "max_length" : 200
-```
-Получаем результат:
-```json
-  "Question: How much sovereign nations does Russia have? Answer: sixteen"
 ```
 
