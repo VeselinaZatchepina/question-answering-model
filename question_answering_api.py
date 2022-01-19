@@ -31,7 +31,7 @@ app = FastAPI(
 async def root():
     return "This is a question answering model"
 
-@app.post("/predict/", tags=["Вопрос|Ответ"])
+@app.post("/predict_ans/", tags=["Вопрос|Ответ"])
 async def predict(item: Item):
     return fl.answer_question(item.question, item.paragraph)
 
