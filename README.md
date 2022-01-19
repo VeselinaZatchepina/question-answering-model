@@ -23,6 +23,7 @@ https://question-answering-model.herokuapp.com/docs
     "question" : "How much sovereign nations does Russia have?",
     "paragraph" : "Russia (Russian: Россия, Rossiya, Russian pronunciation:[rɐˈsʲijə]), or the Russian Federation,[b] is a country spanning Eastern Europe and Northern Asia. It is the largest country in the world, covering over 17,125,191 square kilometres (6,612,073 sq mi), and encompassing one-eighth of Earth's inhabitable landmass. Russia extends across eleven time zones, and has the most borders of any country in the world, with sixteen sovereign nations.[c] It has a population of 146.2 million; and is the most populous country in Europe, and the ninth-most populous country in the world. Moscow, the capital, is the largest city in Europe; while Saint Petersburg is the second-largest city and cultural centre. Russians are the largest Slavic and European nation; they speak Russian, the most spoken Slavic language, and the most spoken native language in Europe."            
 ```
+
 Получаем результат:
 ```json
   "Question: How much sovereign nations does Russia have? Answer: sixteen"
@@ -43,3 +44,5 @@ https://question-answering-model.herokuapp.com/docs
   "How much sovereign nations does Russia was making more chin looked at the time and was except for any old-fash"
 ```
 
+Запрос - ответ через Postman:
+![2022-01-19_19-25-37](https://user-images.githubusercontent.com/65940534/150151231-3452e819-2f11-4c2d-bc42-4b43024fd2e8.png)
