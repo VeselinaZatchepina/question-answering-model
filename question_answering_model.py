@@ -45,15 +45,15 @@ def answer_question(question, answer_text):
     
     return f'Question: {question} Answer: {answer}'
 
-def generate_text(text, max_length, temperature):
+#def generate_text(text, max_length, temperature):
     #Модель генерации текста от Сбербанка, работает с русским, но не походит для Heroku
     #tok = AutoTokenizer.from_pretrained("sberbank-ai/rugpt3small_based_on_gpt2")
     #model = AutoModelForCausalLM.from_pretrained("sberbank-ai/rugpt3small_based_on_gpt2")
 
-    tok = AutoTokenizer.from_pretrained("google/t5-small-lm-adapt")
-    model = AutoModelForSeq2SeqLM.from_pretrained("google/t5-small-lm-adapt")
+    #tok = AutoTokenizer.from_pretrained("google/t5-small-lm-adapt")
+    #model = AutoModelForSeq2SeqLM.from_pretrained("google/t5-small-lm-adapt")
 
-    return tok.decode(model.generate(tok.encode(text, return_tensors="pt"), do_sample=True,temperature=temperature, max_length=max_length)[0])
+    #return tok.decode(model.generate(tok.encode(text, return_tensors="pt"), do_sample=True,temperature=temperature, max_length=max_length)[0])
 
 def generate_cap(text, max_length, temperature):
     #Модель Google, которая дополняет текст фразами из "Преступления и наказания"

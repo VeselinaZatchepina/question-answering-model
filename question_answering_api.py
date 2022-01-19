@@ -35,9 +35,9 @@ async def root():
 async def predict(item: Item):
     return fl.answer_question(item.question, item.paragraph)
 
-@app.post("/predict_sequel/", tags=["Перефразирование"])
-async def predict_sequel(sequel: sequel):
-    return fl.generate_text(sequel.text, sequel.max_length, sequel.temperature)
+#@app.post("/predict_sequel/", tags=["Перефразирование"])
+#async def predict_sequel(sequel: sequel):
+#    return fl.generate_text(sequel.text, sequel.max_length, sequel.temperature)
 
 @app.post("/predict_cap/", tags=["Преступление и наказание"])
 async def predict_sequel(sequel: sequel):

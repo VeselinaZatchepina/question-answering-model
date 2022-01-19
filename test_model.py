@@ -21,18 +21,6 @@ def test_question_nations():
     assert response.status_code == 200
     assert json_data == "Question: How much sovereign nations does Russia have? Answer: sixteen"
 
-def test_sequel():
-    response = client.post("/predict_sequel/",
-       json={
-           "text" : "The superjumbo was developed at a cost of $25 billion and, with capacity for up to 853 passengers, it's the largest mass-produced civil airliner in history",
-           "max_length" : 100
-       }
-    )
-    json_data = response.json()
-
-    assert response.status_code == 200
-    assert len(json_data) > 100
-
 def test_cap():
     response = client.post("/predict_cap/",
        json={
@@ -44,3 +32,15 @@ def test_cap():
 
     assert response.status_code == 200
     assert len(json_data) > 50
+
+#def test_sequel():
+    #response = client.post("/predict_sequel/",
+    #   json={
+    #       "text" : "The superjumbo was developed at a cost of $25 billion and, with capacity for up to 853 passengers, it's the largest mass-produced civil airliner in history",
+    #       "max_length" : 100
+    #   }
+    #)
+    #json_data = response.json()
+
+    #assert response.status_code == 200
+    #assert len(json_data) > 100
