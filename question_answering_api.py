@@ -16,7 +16,7 @@ class sequel(BaseModel):
         
 
 app = FastAPI(
-    title="URFU_TextApp ",
+    title="URFU Text Working API",
     description=ds.description,
     openapi_tags=ds.tags_metadata,
     version="0.2",
